@@ -9,7 +9,7 @@ import {
   useAnimate,
 } from "framer-motion";
 
-export function FadeInWhenVisible({ children }) {
+export function FadeInWhenVisible({ children }: { children: any }) {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
 

@@ -16,7 +16,10 @@ const AboutUs = () => {
           name="Vaibhav Raj"
           linkedin="https://www.linkedin.com/in/vaibhav-raj-b80489261/"
         />
-        <AboutUsCard name="Sarthak Garg" linkedin="asf/asf" />
+        <AboutUsCard
+          name="Sarthak Garg"
+          linkedin="https://in.linkedin.com/in/sarthak-garg-356b062a9"
+        />
       </div>
     </div>
   );

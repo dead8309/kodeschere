@@ -15,6 +15,7 @@ const Showcase = () => {
         src={screenImage}
         className="rounded-xl flex-grow-0 border mb-4 grow-0 aspect-video min-[1050px]:w-[500px] border-primary shadow-multi-glow"
         style={{ objectFit: "contain" }}
+        alt="screen-cap"
       />
       <div className="flex flex-col md:p-4 gap-2 min-h-full items-center">
         <h1 className="text-3xl bg-clip-text md:text-left text-center text-transparent bg-gradient-to-l from-fuchsia-50 to-primary bg-opacity-50 text-primary font-bold">

@@ -4,13 +4,16 @@ import Image from "next/image";
 import { Linkedin } from "lucide-react";
 import Link from "next/link";
 
-const AboutUsCard = ({ src, name, linkedin }) => {
+const AboutUsCard = ({
+  name,
+  linkedin,
+}: {
+  name: string;
+  linkedin: string;
+}) => {
   return (
     <Card className="w-full">
       <CardHeader>
-        <div className="flex justify-center animate-bounce">
-          <Image />
-        </div>
         <CardTitle className="text-center">{name}</CardTitle>
       </CardHeader>
       <CardContent className="text-center text-wrap flex text-primary justify-center w-full">
