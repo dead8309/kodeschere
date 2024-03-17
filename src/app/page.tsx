@@ -67,7 +67,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div class="absolute  bottom-0 inset-0 bg-gradient-to-t from-background to-transparent"></div>
+        <div className="absolute  bottom-0 inset-0 bg-gradient-to-t from-background to-transparent"></div>
       </div>
       <div className="h-screen"></div>
       <Feat />
