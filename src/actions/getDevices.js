@@ -3,7 +3,10 @@
 export const GetDevices = async () => {
   console.log(process.env.TEAMID);
   const res = await fetch(
-    `https://kodessphere-api.vercel.app/devices/${process.env.TEAMID}`
+    `https://kodessphere-api.vercel.app/devices/${process.env.TEAMID}`,
+    {
+      cache: "no-store",
+    }
   );
   const data = await res.json();
   return data;
