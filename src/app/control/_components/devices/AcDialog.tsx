@@ -8,7 +8,13 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { AirVent, Minus, Plus } from "lucide-react";
+import {
+  AirVent,
+  Minus,
+  Plus,
+  ThermometerSnowflake,
+  ThermometerSun,
+} from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
@@ -60,7 +66,7 @@ const AcDialog = ({ state, temp }: { temp: number; state: number }) => {
     >
       <div>
         <Card
-          className={cn("rounded-3xl", {
+          className={cn("rounded-3xl h-52", {
             "bg-gradient-to-tl from-[#6441A5] to-[#2a0845]": turnedOn,
           })}
         >
@@ -82,7 +88,13 @@ const AcDialog = ({ state, temp }: { temp: number; state: number }) => {
           <DialogTrigger>
             <CardContent>
               <div className="flex flex-col space-y-6 items-start">
-                <AirVent size={42} />
+                <AirVent
+                  size={42}
+                  className={cn("stroke-current", {
+                    "text-blue-500": temp <= 23,
+                    "text-yellow-500": temp > 23,
+                  })}
+                />
                 <p
                   className={cn(
                     "text-lg",
@@ -117,8 +129,13 @@ const AcDialog = ({ state, temp }: { temp: number; state: number }) => {
               <span className="sr-only">Decrease</span>
             </Button>
             <div className="flex-1 text-center">
-              <div className="text-7xl font-bold tracking-tighter">
+              <div className="flex items-center justify-center text-7xl font-bold tracking-tighter gap-2">
                 {temperature}
+                {temperature <= 23 ? (
+                  <ThermometerSnowflake size={42} className="stroke-blue-300"/>
+                ) : (
+                  <ThermometerSun size={42} className="stroke-yellow-300" />
+                )}
               </div>
               <div className="text-[0.70rem] uppercase text-muted-foreground">
                 Temperature

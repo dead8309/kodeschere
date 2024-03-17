@@ -56,7 +56,7 @@ const FanDialog = ({ value }: { value: number }) => {
       <DialogTrigger>
         <div>
           <Card
-            className={cn("rounded-3xl", {
+            className={cn("rounded-3xl h-52", {
               "bg-gradient-to-tl from-[#6441A5] to-[#2a0845]": turnedOn,
             })}
           >
