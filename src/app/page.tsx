@@ -7,6 +7,7 @@ import Success from "../components/Landing/Success";
 import Showcase from "@/components/Showcase/Showcase";
 import Footer from "@/components/Footer";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter";
+import AboutUs from "@/components/AboutUs";
 export default function Page() {
   const subTitle = [
     {
@@ -20,7 +21,7 @@ export default function Page() {
         "text-xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50",
     },
     {
-      text: "home",
+      text: "home,",
       className:
         "text-xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50",
     },
@@ -37,7 +38,7 @@ export default function Page() {
   ];
   return (
     <div className="overflow-hidden">
-      <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#F6F6F6,transparent_1px)] [background-size:16px_16px]">
+      <div className="absolute pointer-events-none inset-0 -z-10 h-full w-full bg-[radial-gradient(#F6F6F6,transparent_1px)] [background-size:16px_16px]">
         <div className="w-full rounded-md flex md:items-center md:justify-center antialiased bg-grid-white/[0.02] relative ">
           <Spotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
@@ -60,19 +61,20 @@ export default function Page() {
               you with effortless management of every aspect of your home
               environment.
             </p>
-            <div className="flex w-full items-center justify-center pt-4">
-              <Link href={"/control"} className={buttonVariants()}>
+            <div className="flex w-full items-center justify-center pt-4 z-20">
+              <Link href="/control" className={buttonVariants()}>
                 Get Started
               </Link>
             </div>
           </div>
         </div>
-        <div class="absolute  bottom-0 inset-0 bg-gradient-to-t from-background to-transparent"></div>
+        <div className="absolute -z-20 bottom-0 inset-0 bg-gradient-to-t from-background to-transparent"></div>
       </div>
-      <div className="h-screen"></div>
+      <div className="h-screen pointer-events-none -z-20"></div>
       <Feat />
       <Success />
       <Showcase />
+      <AboutUs />
       <Footer />
     </div>
   );
