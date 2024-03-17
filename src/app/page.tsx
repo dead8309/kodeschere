@@ -7,6 +7,7 @@ import Success from "../components/Landing/Success";
 import Showcase from "@/components/Showcase/Showcase";
 import Footer from "@/components/Footer";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter";
+import AboutUs from "@/components/AboutUs";
 export default function Page() {
   const subTitle = [
     {
@@ -20,7 +21,7 @@ export default function Page() {
         "text-xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50",
     },
     {
-      text: "home",
+      text: "home,",
       className:
         "text-xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50",
     },
@@ -60,8 +61,8 @@ export default function Page() {
               you with effortless management of every aspect of your home
               environment.
             </p>
-            <div className="flex w-full items-center justify-center pt-4">
-              <Link href={"/control"} className={buttonVariants()}>
+            <div className="flex w-full items-center justify-center pt-4 z-20">
+              <Link href="/control" className={buttonVariants()}>
                 Get Started
               </Link>
             </div>
@@ -69,10 +70,11 @@ export default function Page() {
         </div>
         <div className="absolute  bottom-0 inset-0 bg-gradient-to-t from-background to-transparent"></div>
       </div>
-      <div className="h-screen"></div>
+      <div className="h-screen pointer-events-none -z-20"></div>
       <Feat />
       <Success />
       <Showcase />
+      <AboutUs />
       <Footer />
     </div>
   );

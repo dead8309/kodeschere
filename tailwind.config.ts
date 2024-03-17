@@ -20,7 +20,7 @@ const config = {
     extend: {
       boxShadow: {
         "multi-glow":
-          "5px 5px rgba(98, 0, 98, 0.4), 10px 10px rgba(98, 0, 98, 0.3), 15px 15px rgba(98, 0, 98, 0.2), 20px 20px rgba(98, 0, 98, 0.1), 25px 25px rgba(98, 0, 98, 0.05)",
+          "5px 5px rgba(128, 0, 128, 0.4), 10px 10px rgba(128, 0, 128, 0.3), 15px 15px rgba(128, 0, 128, 0.2), 20px 20px rgba(128, 0, 128, 0.1), 25px 25px rgba(128, 0, 128, 0.05)",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -88,7 +88,7 @@ const config = {
           "100%": {
             opacity: "1",
           },
-        }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
