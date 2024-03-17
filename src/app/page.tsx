@@ -3,16 +3,20 @@ import { Spotlight } from "@/components/Spotlight";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import Feat from "../components/Landing/Feat";
+import Success from "../components/Landing/Success";
+import Showcase from "@/components/Showcase/Showcase";
+import Footer from "@/components/Footer";
 export default function Page() {
   return (
-    <div className="w-screen overflow-hidden">
+    <div className="overflow-hidden">
       <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#F6F6F6,transparent_1px)] [background-size:16px_16px]">
-        <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center antialiased bg-grid-white/[0.02] relative overflow-hidden">
+        <div className="w-full rounded-md flex md:items-center md:justify-center antialiased bg-grid-white/[0.02] relative ">
           <Spotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
             fill="white"
           />
-          <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
+
+          <div className=" p-4 max-w-7xl top-32 mx-auto relative z-10  w-full pt-20 md:pt-0">
             <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
               Konnex-Control <br /> Your Smart home, Your way.
             </h1>
@@ -29,8 +33,13 @@ export default function Page() {
             </div>
           </div>
         </div>
+        <div class="absolute  bottom-0 inset-0 bg-gradient-to-t from-background to-transparent"></div>
       </div>
+      <div className="h-screen"></div>
       <Feat />
+      <Success />
+      <Showcase />
+      <Footer />
     </div>
   );
 }
