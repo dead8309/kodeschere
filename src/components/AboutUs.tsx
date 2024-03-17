@@ -8,9 +8,15 @@ const AboutUs = () => {
         About Us
       </h1>
       <div className="flex gap-4 p-4 md:flex-row flex-col">
-        <AboutUsCard name="Adarsh Upadhyay" linkedin="asf/asf" />
-        <AboutUsCard name="Vaibhav Raj" linkedin="asf/asf" />
-        <AboutUsCard name="Adarsh Upadhyay" linkedin="asf/asf" />
+        <AboutUsCard
+          name="Adarsh Upadhyay"
+          linkedin="https://www.linkedin.com/in/adarsh-upadhyay-8b8a55232/"
+        />
+        <AboutUsCard
+          name="Vaibhav Raj"
+          linkedin="https://www.linkedin.com/in/vaibhav-raj-b80489261/"
+        />
+        <AboutUsCard name="Sarthak Garg" linkedin="asf/asf" />
       </div>
     </div>
   );
