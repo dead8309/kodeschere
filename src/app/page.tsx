@@ -6,7 +6,35 @@ import Feat from "../components/Landing/Feat";
 import Success from "../components/Landing/Success";
 import Showcase from "@/components/Showcase/Showcase";
 import Footer from "@/components/Footer";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter";
 export default function Page() {
+  const subTitle = [
+    {
+      text: "Your",
+      className:
+        "text-xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50",
+    },
+    {
+      text: "Smart",
+      className:
+        "text-xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50",
+    },
+    {
+      text: "home",
+      className:
+        "text-xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50",
+    },
+    {
+      text: "Your",
+      className:
+        "text-xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50",
+    },
+    {
+      text: "way.",
+      className:
+        "text-xl md:text-4xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50",
+    },
+  ];
   return (
     <div className="overflow-hidden">
       <div className="absolute inset-0 -z-10 h-full w-full bg-[radial-gradient(#F6F6F6,transparent_1px)] [background-size:16px_16px]">
@@ -17,9 +45,15 @@ export default function Page() {
           />
 
           <div className=" p-4 max-w-7xl top-32 mx-auto relative z-10  w-full pt-20 md:pt-0">
-            <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-              Konnex-Control <br /> Your Smart home, Your way.
-            </h1>
+            <div className="w-full flex-col items-center flex justify-center">
+              <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+                Konnex-Control
+              </h1>
+              <TypewriterEffectSmooth
+                cursorClassName="bg-white h-8 sm:h-10"
+                words={subTitle}
+              />
+            </div>
             <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
               Konnex-Control is your gateway to seamless and intuitive control
               of your smart home devices. Our platform is designed to empower
