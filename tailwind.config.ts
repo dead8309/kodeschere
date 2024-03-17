@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      boxShadow: {
+        "multi-glow":
+          "5px 5px rgba(98, 0, 98, 0.4), 10px 10px rgba(98, 0, 98, 0.3), 15px 15px rgba(98, 0, 98, 0.2), 20px 20px rgba(98, 0, 98, 0.1), 25px 25px rgba(98, 0, 98, 0.05)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -77,11 +81,30 @@ const config = {
             transform: "translate(-50%,-40%) scale(1)",
           },
         },
+        fadein: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
+        spotlight: {
+          "0%": {
+            opacity: "0",
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        fadein: "fadein 10s ease .75s 1 forwards",
       },
     },
   },
