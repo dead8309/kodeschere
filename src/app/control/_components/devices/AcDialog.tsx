@@ -15,6 +15,7 @@ import { cn } from "@/lib/utils";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import { stat } from "fs";
+import { Switch } from "@/components/ui/switch";
 
 const URL = "https://kodessphere-api.vercel.app";
 
@@ -24,7 +25,7 @@ const AcDialog = ({ state, temp }: { temp: number; state: number }) => {
   const [show, setShow] = useState(false);
   const router = useRouter();
 
-  const submitSpeed = () => {
+  const submitTemp = (state: Boolean) => {
     const request = async () => {
       const res = await fetch(`${URL}/devices`, {
         method: "POST",
@@ -36,7 +37,7 @@ const AcDialog = ({ state, temp }: { temp: number; state: number }) => {
           device: "ac",
           value: {
             temp: temperature,
-            state: turnedOn ? 1 : 0,
+            state: state ? 1 : 0,
           },
         }),
       });
@@ -57,20 +58,28 @@ const AcDialog = ({ state, temp }: { temp: number; state: number }) => {
         setShow(v);
       }}
     >
-      <DialogTrigger>
-        <div>
-          <Card
-            className={cn("rounded-3xl", {
-              "bg-gradient-to-tl from-[#6441A5] to-[#2a0845]": turnedOn,
-            })}
-          >
-            <CardHeader>
-              <CardTitle className="text-3xl">
-                <div className="flex items-center justify-between">
-                  <Label htmlFor="mode">{turnedOn ? `On` : "Off"}</Label>
-                </div>
-              </CardTitle>
-            </CardHeader>
+      <div>
+        <Card
+          className={cn("rounded-3xl", {
+            "bg-gradient-to-tl from-[#6441A5] to-[#2a0845]": turnedOn,
+          })}
+        >
+          <CardHeader>
+            <CardTitle className="text-3xl">
+              <div className="flex items-center justify-between">
+                <Switch
+                  id={"mode"}
+                  checked={turnedOn}
+                  onCheckedChange={(v) => {
+                    setTurnedOn(v);
+                    submitTemp(v);
+                  }}
+                />
+                <Label htmlFor="mode">{turnedOn ? "On" : "Off"}</Label>
+              </div>
+            </CardTitle>
+          </CardHeader>
+          <DialogTrigger>
             <CardContent>
               <div className="flex flex-col space-y-6 items-start">
                 <AirVent size={42} />
@@ -84,9 +93,9 @@ const AcDialog = ({ state, temp }: { temp: number; state: number }) => {
                 </p>
               </div>
             </CardContent>
-          </Card>
-        </div>
-      </DialogTrigger>
+          </DialogTrigger>
+        </Card>
+      </div>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Set Temperature</DialogTitle>
@@ -132,7 +141,7 @@ const AcDialog = ({ state, temp }: { temp: number; state: number }) => {
           </div>
         </div>
         <DialogFooter className="flex w-full items-center justify-center">
-          <Button onClick={submitSpeed}>Save</Button>
+          <Button onClick={() => submitTemp(turnedOn)}>Save</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

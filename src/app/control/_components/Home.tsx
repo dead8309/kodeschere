@@ -14,7 +14,7 @@ const Home = ({ data }: { data: any }) => {
   return (
     <div className="flex flex-col space-y-4">
       <h1 className="text-3xl font-bold">User's Home</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <LightBulb
           data={{
             state: data.bulb,

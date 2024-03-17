@@ -82,7 +82,7 @@ const LedDialog = ({ value }: { value: string }) => {
         <DialogHeader>
           <DialogTitle>Set Led Color</DialogTitle>
         </DialogHeader>
-        <div className="flex w-full items-center gap-20">
+        <div className="flex w-full items-center gap-20 md:gap-20">
           <Wheel
             color={color}
             onChange={(color) => {

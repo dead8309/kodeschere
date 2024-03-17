@@ -6,7 +6,7 @@ import DashboardPage from "./_components/Dashboard";
 const Control = async () => {
   const data = await GetDevices();
   console.log(data);
-  return <DashboardPage data = {data} />;
+  return <DashboardPage data={data} />;
 };
 
 export default Control;
