@@ -38,7 +38,7 @@ export default function Page() {
   ];
   return (
     <div className="overflow-hidden">
-      <div className="absolute pointer-events-none inset-0 -z-10 h-full w-full bg-[radial-gradient(#F6F6F6,transparent_1px)] [background-size:16px_16px]">
+      <div className="absolute inset-0 h-full w-full bg-[radial-gradient(#F6F6F6,transparent_1px)] [background-size:16px_16px]">
         <div className="w-full rounded-md flex md:items-center md:justify-center antialiased bg-grid-white/[0.02] relative ">
           <Spotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
@@ -68,7 +68,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="absolute -z-20 bottom-0 inset-0 bg-gradient-to-t from-background to-transparent"></div>
+        <div className="absolute  bottom-0 inset-0 bg-gradient-to-t from-background to-transparent"></div>
       </div>
       <div className="h-screen pointer-events-none -z-20"></div>
       <Feat />
