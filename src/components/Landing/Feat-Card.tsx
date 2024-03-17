@@ -9,7 +9,15 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 
-const FeatCard = ({ Icon, name, content }) => {
+const FeatCard = ({
+  Icon,
+  name,
+  content,
+}: {
+  Icon: any;
+  name: any;
+  content: any;
+}) => {
   return (
     <Card className="w-full">
       <CardHeader>
