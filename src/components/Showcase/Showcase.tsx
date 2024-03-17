@@ -12,7 +12,7 @@ const Showcase = () => {
     <div className="w-screen flex justify-center mt-4 gap-4 md:flex-row flex-col p-12">
       <Image alt="screen"
         src="/screen.jpg"
-        className="rounded-xl border mb-4 grow-0 aspect-video md:w-[500px] border-fuchsia-500 shadow-multi-glow"
+        className="rounded-xl border h-max mb-4 grow-0 aspect-video md:w-[500px] border-fuchsia-500 shadow-multi-glow"
         width={1200}
         height={600}
       />
