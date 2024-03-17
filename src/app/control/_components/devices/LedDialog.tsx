@@ -54,29 +54,27 @@ const LedDialog = ({ value }: { value: string }) => {
       }}
     >
       <DialogTrigger>
-        <div>
-          <Card className={cn("rounded-3xl")}>
-            <CardHeader>
-              <CardTitle className="text-3xl">
-                <div className="flex items-center justify-between">
-                  <Label htmlFor="mode">Pick a Color</Label>
-                </div>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-col space-y-6 items-start">
-                <Lightbulb
-                  size={42}
-                  className={"fill-current"}
-                  style={{
-                    color: color,
-                  }}
-                />
-                <p className="text-lg">Led</p>
+        <Card className="rounded-3xl h-52">
+          <CardHeader>
+            <CardTitle className="text-3xl">
+              <div className="flex items-center justify-between">
+                <Label htmlFor="mode">Pick a Color</Label>
               </div>
-            </CardContent>
-          </Card>
-        </div>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-col space-y-6 items-start">
+              <Lightbulb
+                size={42}
+                className={"fill-current"}
+                style={{
+                  color: color,
+                }}
+              />
+              <p className="text-lg">Led</p>
+            </div>
+          </CardContent>
+        </Card>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
@@ -92,7 +90,7 @@ const LedDialog = ({ value }: { value: string }) => {
           />
           <Lightbulb
             size={92}
-            className='fill-current'
+            className="fill-current"
             style={{
               color: color,
             }}
