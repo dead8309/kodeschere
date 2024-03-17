@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FadeInWhenVisible } from "../ui/fade-in-when-visible";
 const SuccessCard = ({
   Icon,
   title,
@@ -11,8 +11,10 @@ const SuccessCard = ({
 }) => {
   return (
     <div className=" flex gap-4 items-center text-3xl flex-grow-0  hover:text-4xl justify-center flex-col w-64 p-4">
-      <Icon.type color="#BF40BF" size={64} strokeWidth={1} />
-      <h1 className=" font-bold  transition-all animate-fadein">{title}</h1>
+      <Icon.type color="#5100a3" size={64} strokeWidth={1} />
+      <FadeInWhenVisible>
+        <h1 className=" font-bold  transition-all ">{title}</h1>
+      </FadeInWhenVisible>
       <p className="text-center text-sm">{content}</p>
     </div>
   );
