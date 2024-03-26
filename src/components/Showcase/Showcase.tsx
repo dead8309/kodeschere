@@ -10,12 +10,12 @@ const Showcase = () => {
   optimize your energy usage, and enjoy the convenience of smart living
   with our dashboard.`;
   return (
-    <div className="w-screen flex justify-center mt-4 gap-4 min-[1050px]:flex-row flex-col p-12">
-      <Image
-        src={screenImage}
-        className="rounded-xl flex-grow-0 border mb-4 grow-0 aspect-video min-[1050px]:w-[500px] border-primary shadow-multi-glow"
-        style={{ objectFit: "contain" }}
-        alt="screen-cap"
+    <div className="w-screen flex justify-center mt-4 gap-4 md:flex-row flex-col p-12">
+      <Image alt="screen"
+        src="/screen.jpg"
+        className="rounded-xl border mb-4 h-max grow-0 aspect-video md:w-[500px] border-fuchsia-500 shadow-multi-glow"
+        width={1200}
+        height={600}
       />
       <div className="flex flex-col md:p-4 gap-2 min-h-full items-center">
         <h1 className="text-3xl bg-clip-text md:text-left text-center text-transparent bg-gradient-to-l from-fuchsia-50 to-primary bg-opacity-50 text-primary font-bold">
